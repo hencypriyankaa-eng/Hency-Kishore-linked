@@ -3,1026 +3,699 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ExecutiveBrand — Turn Your LinkedIn From Invisible to Influential</title>
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <title>Happy Birthday Anto Sherina ✨</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --brand-dark:   #005d8f;
-      --brand-mid:    #0077b5;
-      --brand-light:  #cde5ff;
-      --brand-pale:   #c6e7ff;
-      --bg-lavender:  #f2f3ff;
-      --bg-soft:      #faf8ff;
-      --bg-form:      #eaedff;
-      --text-dark:    #131b2e;
-      --text-mid:     #404850;
-      --text-muted:   rgba(64,72,80,0.7);
-      --text-subtle:  rgba(64,72,80,0.6);
-      --border-light: rgba(191,199,209,0.3);
-      --border-med:   rgba(191,199,209,0.5);
-      --border-faint: rgba(191,199,209,0.2);
+      --bg-deep:     #150826;
+      --bg-mid:      #220f3a;
+      --gold:        #c9a227;
+      --gold-light:  #e4bf5a;
+      --gold-pale:   #f0d690;
+      --pink:        #e879a0;
+      --white:       #ffffff;
+      --white-80:    rgba(255,255,255,0.80);
+      --white-60:    rgba(255,255,255,0.60);
+      --white-40:    rgba(255,255,255,0.40);
+      --white-20:    rgba(255,255,255,0.20);
+      --white-10:    rgba(255,255,255,0.10);
+      --white-06:    rgba(255,255,255,0.06);
+      --border:      rgba(255,255,255,0.12);
+      --border-gold: rgba(201,162,39,0.35);
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: #fff;
-      color: var(--text-dark);
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg-deep);
+      color: var(--white);
       overflow-x: hidden;
     }
 
+    /* Ambient glow background */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background:
+        radial-gradient(ellipse 90% 55% at 50% -5%,  rgba(108,44,190,0.28) 0%, transparent 60%),
+        radial-gradient(ellipse 55% 35% at 85% 75%,  rgba(168,85,247,0.13) 0%, transparent 55%),
+        radial-gradient(ellipse 45% 30% at 15% 55%,  rgba(201,162,39,0.07) 0%, transparent 50%);
+      pointer-events: none; z-index: 0;
+    }
+
+    #starCanvas {
+      position: fixed; inset: 0;
+      pointer-events: none; z-index: 0;
+    }
+
+    .layer { position: relative; z-index: 1; }
+
     /* ── NAV ──────────────────────────────────────────── */
     nav {
-      position: sticky;
-      top: 0;
+      position: fixed; top: 0; left: 0; right: 0;
       z-index: 100;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-faint);
-      padding: 0 max(24px, calc((100% - 1280px)/2 + 64px));
-      height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      display: flex; justify-content: center; gap: 48px;
+      padding: 22px 0;
+      background: linear-gradient(to bottom, rgba(21,8,38,0.92) 0%, transparent 100%);
+      backdrop-filter: blur(6px);
     }
 
-    .nav-logo {
-      font-family: 'Hanken Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 20px;
-      color: var(--brand-dark);
-      letter-spacing: -0.4px;
+    nav a {
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--white-40); text-decoration: none;
+      transition: color .25s;
     }
-
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text-mid);
-      text-decoration: none;
-      letter-spacing: 0.4px;
-      transition: color .2s;
-    }
-
-    .nav-links a:hover { color: var(--brand-dark); }
-
-    .nav-cta {
-      background: var(--brand-mid);
-      color: #fff !important;
-      padding: 10px 22px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1);
-    }
-
-    /* ── SECTION WRAPPER ──────────────────────────────── */
-    .section-wrap {
-      width: 100%;
-      padding-left:  max(24px, calc((100% - 1280px)/2 + 64px));
-      padding-right: max(24px, calc((100% - 1280px)/2 + 64px));
-    }
+    nav a.active, nav a:hover { color: var(--gold-light); }
 
     /* ── HERO ─────────────────────────────────────────── */
     .hero {
-      padding-top: 100px;
-      padding-bottom: 100px;
-      background: #fff;
-      overflow: hidden;
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      padding: 130px 24px 90px;
     }
-
-    .hero-inner {
-      display: flex;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .hero-copy { flex: 1; }
 
     .hero-eyebrow {
-      font-family: 'Inter', sans-serif;
-      font-weight: 700;
-      font-size: 13px;
-      letter-spacing: 1.4px;
-      text-transform: uppercase;
-      color: var(--brand-dark);
-      margin-bottom: 16px;
+      font-size: 10px; font-weight: 600;
+      letter-spacing: 4px; text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 18px;
+      opacity: 0; animation: fadeUp .8s .3s forwards;
     }
 
-    .hero-h1 {
-      font-family: 'Hanken Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: clamp(36px, 4vw, 48px);
-      line-height: 1.17;
-      letter-spacing: -0.96px;
-      color: var(--text-dark);
-      margin-bottom: 20px;
+    .hero-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(54px, 9vw, 92px);
+      font-weight: 600; line-height: 1.1;
+      color: var(--white);
+      margin-bottom: 22px;
+      opacity: 0; animation: fadeUp .9s .5s forwards;
+      text-shadow: 0 0 80px rgba(201,162,39,0.25);
     }
 
-    .hero-sub {
-      font-size: 18px;
-      line-height: 1.6;
-      color: var(--text-mid);
-      max-width: 576px;
-      margin-bottom: 40px;
-    }
-
-    .hero-btns {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      background: var(--brand-mid);
-      color: #f3f7ff;
-      font-weight: 700;
-      font-size: 14px;
-      letter-spacing: 0.7px;
-      padding: 14px 32px;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1);
-      transition: transform .15s, box-shadow .15s;
-      display: inline-block;
-    }
-
-    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 16px -2px rgba(0,0,0,.15); }
-
-    .btn-outline {
-      border: 1.5px solid var(--brand-dark);
-      color: var(--brand-dark);
-      font-weight: 700;
-      font-size: 14px;
-      letter-spacing: 0.7px;
-      padding: 13px 32px;
-      border-radius: 8px;
-      background: transparent;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background .15s, color .15s;
-      display: inline-block;
-    }
-
-    .btn-outline:hover { background: var(--brand-dark); color: #fff; }
-
-    .hero-visual {
-      flex: 1;
-      position: relative;
-    }
-
-    .hero-visual::before {
-      content: '';
-      position: absolute;
-      top: -24px; right: -24px;
-      width: 128px; height: 128px;
-      border-radius: 12px;
-      background: rgba(205,229,255,0.2);
-      filter: blur(32px);
-      pointer-events: none;
-    }
-
-    .hero-visual::after {
-      content: '';
-      position: absolute;
-      bottom: -40px; left: -40px;
-      width: 192px; height: 192px;
-      border-radius: 12px;
-      background: rgba(198,231,255,0.3);
-      filter: blur(32px);
-      pointer-events: none;
-    }
-
-    .hero-img-wrap {
-      border: 1px solid rgba(191,199,209,0.3);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
-      aspect-ratio: 4/3;
-      width: 100%;
-      position: relative;
-    }
-
-    .hero-img-wrap img {
-      width: 100%;
-      height: 133.33%;
-      object-fit: cover;
-      position: absolute;
-      top: -16.67%;
-      left: 0;
-    }
-
-    /* ── STATS ────────────────────────────────────────── */
-    .stats-section {
-      background: var(--bg-lavender);
-      padding-top: 96px;
-      padding-bottom: 96px;
-    }
-
-    .section-label {
-      font-family: 'Hanken Grotesk', sans-serif;
-      font-weight: 600;
-      font-size: 32px;
-      line-height: 1.25;
-      color: var(--brand-dark);
-      text-align: center;
-      margin-bottom: 8px;
-    }
-
-    .section-sub {
-      font-size: 16px;
-      color: var(--text-mid);
-      text-align: center;
-      margin-bottom: 64px;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .stat-card {
-      background: #fff;
-      border: 1px solid var(--border-faint);
-      border-radius: 16px;
-      padding: 33px;
-      box-shadow: 0 1px 1px rgba(0,0,0,.05);
-    }
-
-    .stat-icon {
-      height: 30px;
-      margin-bottom: 12px;
-    }
-
-    .stat-icon img { height: 100%; width: auto; }
-
-    .stat-num {
-      font-family: 'Hanken Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 36px;
-      letter-spacing: -0.72px;
-      color: var(--brand-dark);
-      line-height: 1.17;
-      margin-bottom: 4px;
-    }
-
-    .stat-title {
-      font-family: 'Hanken Grotesk', sans-serif;
-      font-weight: 600;
-      font-size: 24px;
-      color: var(--text-mid);
-      line-height: 1.33;
-      margin-bottom: 8px;
-    }
-
-    .stat-desc {
-      font-size: 16px;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
-
-    /* ── AUDIT CTA ────────────────────────────────────── */
-    .audit-section {
-      padding-top: 96px;
-      padding-bottom: 96px;
-      background: #fff;
-    }
-
-    .audit-wrap {
-      background: var(--brand-dark);
-      border-radius: 24px;
-      padding: 64px;
-      display: flex;
-      gap: 48px;
-      align-items: center;
-      box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .audit-copy { flex: 1; }
-
-    .audit-h2 {
-      font-family: 'Hanken Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: clamp(32px, 3.5vw, 48px);
-      letter-spacing: -0.96px;
-      color: #fff;
-      line-height: 1.17;
-      margin-bottom: 24px;
-    }
-
-    .audit-p {
-      font-size: 18px;
-      line-height: 1.6;
-      color: var(--brand-light);
-      margin-bottom: 32px;
-    }
-
-    .audit-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      margin-bottom: 40px;
-    }
-
-    .audit-list li {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 16px;
-      color: #fff;
-      line-height: 1.5;
-    }
-
-    .audit-check {
-      width: 20px;
-      height: 20px;
-      flex-shrink: 0;
-      background: rgba(255,255,255,0.2);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .audit-check::after {
-      content: '✓';
-      font-size: 11px;
-      color: #fff;
-      font-weight: 700;
-    }
-
-    .btn-audit {
-      display: inline-block;
-      background: var(--bg-soft);
-      color: var(--brand-dark);
-      font-weight: 700;
-      font-size: 16px;
-      padding: 16px 32px;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: transform .15s, box-shadow .15s;
-      cursor: pointer;
-      border: none;
-    }
-
-    .btn-audit:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.2); }
-
-    .audit-cards { flex: 1; }
-
-    .audit-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-
-    .audit-card {
-      background: var(--brand-mid);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 16px;
-      padding: 25px;
-      box-shadow: inset 0 2px 4px rgba(0,0,0,.05);
-    }
-
-    .audit-card.offset { margin-top: 32px; }
-
-    .audit-card-label {
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      font-size: 14px;
-      letter-spacing: 0.7px;
-      color: var(--brand-pale);
-      margin-bottom: 8px;
-    }
-
-    .audit-card-title {
-      font-family: 'Hanken Grotesk', sans-serif;
-      font-size: 16px;
-      color: #fff;
-      line-height: 1.5;
-    }
-
-    /* ── TESTIMONIALS ─────────────────────────────────── */
-    .testi-section {
-      background: var(--bg-soft);
-      padding-top: 96px;
-      padding-bottom: 96px;
-    }
-
-    .testi-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    .testi-card {
-      background: #fff;
-      border: 1px solid var(--border-light);
-      border-radius: 16px;
-      padding: 41px;
-      box-shadow: 0 1px 1px rgba(0,0,0,.05);
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      position: relative;
-    }
-
-    .testi-quote {
+    .hero-tagline {
+      font-family: 'Cormorant Garamond', serif;
       font-style: italic;
-      font-size: 18px;
-      line-height: 1.6;
-      color: var(--text-dark);
+      font-size: clamp(17px, 2.6vw, 23px);
+      font-weight: 400;
+      color: var(--white-60);
+      max-width: 540px; margin: 0 auto 44px;
+      line-height: 1.65;
+      opacity: 0; animation: fadeUp .9s .7s forwards;
     }
 
-    .testi-author {
-      display: flex;
-      align-items: center;
-      gap: 16px;
+    .hero-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 30px 40px;
+      max-width: 560px; width: 100%;
+      margin: 0 auto 52px;
+      backdrop-filter: blur(14px);
+      opacity: 0; animation: fadeUp .9s .9s forwards;
     }
 
-    .testi-avatar {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      background: var(--brand-light);
-      overflow: hidden;
-      flex-shrink: 0;
+    .hero-card p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px; line-height: 1.8;
+      color: var(--white-80);
+      font-style: italic;
     }
 
-    .testi-avatar img { width: 100%; height: 100%; object-fit: cover; }
-
-    .testi-name {
-      font-weight: 700;
-      font-size: 16px;
-      color: var(--text-dark);
-      line-height: 1.5;
+    .hero-card p + p {
+      margin-top: 12px;
+      color: var(--white-55, rgba(255,255,255,.55));
+      font-size: 17px;
     }
 
-    .testi-role {
-      font-weight: 500;
-      font-size: 14px;
-      letter-spacing: 0.7px;
-      color: var(--text-mid);
+    .btn-surprise {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: transparent;
+      border: 1.5px solid rgba(201,162,39,0.55);
+      color: var(--gold-pale);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px; font-weight: 500;
+      letter-spacing: 1.8px; text-transform: uppercase;
+      padding: 15px 36px; border-radius: 40px;
+      cursor: pointer; text-decoration: none;
+      transition: background .25s, color .25s, box-shadow .25s, transform .15s;
+      opacity: 0; animation: fadeUp .9s 1.1s forwards;
     }
 
-    .testi-qq {
-      position: absolute;
-      top: 32px; right: 32px;
-      font-family: Georgia, serif;
-      font-size: 72px;
-      color: var(--brand-light);
-      line-height: 0.6;
-      user-select: none;
+    .btn-surprise:hover {
+      background: var(--gold);
+      color: var(--bg-deep);
+      border-color: var(--gold);
+      box-shadow: 0 0 36px rgba(201,162,39,0.3);
+      transform: translateY(-2px);
     }
 
-    /* ── LEAD FORM ────────────────────────────────────── */
-    .form-section {
-      background: var(--bg-form);
-      padding-top: 96px;
-      padding-bottom: 96px;
-    }
-
-    .form-wrap {
-      max-width: 720px;
-      margin: 0 auto;
-      background: #fff;
-      border: 1px solid var(--border-light);
-      border-radius: 24px;
-      padding: 65px;
-      box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1);
-    }
-
-    .form-title {
-      font-family: 'Hanken Grotesk', sans-serif;
-      font-weight: 600;
-      font-size: 32px;
-      color: var(--text-dark);
+    /* ── COUNTDOWN ────────────────────────────────────── */
+    .countdown-section {
+      padding: 110px 24px;
       text-align: center;
-      line-height: 1.25;
-      margin-bottom: 8px;
     }
 
-    .form-sub {
-      font-size: 16px;
-      color: var(--text-mid);
-      text-align: center;
-      margin-bottom: 48px;
+    .countdown-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 600; color: var(--white);
+      margin-bottom: 70px; line-height: 1.3;
     }
 
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      margin-bottom: 24px;
+    .countdown-grid {
+      display: flex; justify-content: center;
+      gap: 14px; flex-wrap: wrap;
     }
 
-    .field-group { display: flex; flex-direction: column; gap: 8px; }
-
-    .field-label {
-      font-weight: 700;
-      font-size: 14px;
-      letter-spacing: 0.7px;
-      color: var(--text-mid);
+    .cd-item {
+      width: 96px; height: 96px;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 14px;
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(10px);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 6px;
     }
 
-    .field-input {
-      background: var(--bg-soft);
-      border: 1px solid var(--border-med);
-      border-radius: 8px;
-      padding: 15px 17px;
-      font-size: 16px;
-      font-family: 'Inter', sans-serif;
-      color: var(--text-dark);
-      outline: none;
-      transition: border-color .2s, box-shadow .2s;
-      width: 100%;
+    .cd-item:last-child {
+      border-color: rgba(201,162,39,0.5);
+      background: rgba(201,162,39,0.07);
     }
 
-    .field-input::placeholder { color: #6b7280; }
-    .field-input:focus { border-color: var(--brand-dark); box-shadow: 0 0 0 3px rgba(0,93,143,.12); }
+    .cd-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px; font-weight: 600;
+      color: var(--white); line-height: 1;
+    }
 
-    .field-full { margin-bottom: 24px; }
+    .cd-item:last-child .cd-num { color: var(--gold-light); }
 
-    .btn-submit {
-      width: 100%;
-      background: var(--brand-dark);
-      color: #fff;
-      font-weight: 700;
-      font-size: 18px;
-      padding: 16px;
-      border-radius: 8px;
-      border: none;
+    .cd-label {
+      font-size: 9px; letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--white-40);
+    }
+
+    /* ── CAKE ─────────────────────────────────────────── */
+    .cake-section { padding: 0 24px 110px; }
+
+    .cake-outer { max-width: 600px; margin: 0 auto; }
+
+    .cake-card {
+      position: relative;
+      border-radius: 24px; overflow: hidden;
+      border: 1px solid var(--border);
+      background: #1e0f35;
+      min-height: 400px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
       cursor: pointer;
-      box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1);
-      transition: transform .15s, box-shadow .15s, background .15s;
-      margin-bottom: 16px;
+      box-shadow: 0 28px 72px rgba(0,0,0,0.55);
     }
 
-    .btn-submit:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 14px 20px -4px rgba(0,0,0,.15); }
-    .btn-submit:disabled { opacity: .7; cursor: not-allowed; }
+    .cake-bg-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%; object-fit: cover;
+      filter: blur(6px) brightness(0.5) saturate(0.6);
+      transition: filter 1.4s ease;
+      z-index: 0;
+    }
 
-    .form-privacy {
-      font-weight: 500;
-      font-size: 14px;
-      letter-spacing: 0.7px;
-      color: var(--text-subtle);
+    .cake-card.revealed .cake-bg-img {
+      filter: blur(0px) brightness(0.75) saturate(1.1);
+    }
+
+    .cake-overlay {
+      position: absolute; inset: 0;
+      backdrop-filter: blur(20px);
+      background: rgba(20,8,40,0.5);
+      transition: opacity 1.4s ease, backdrop-filter 1.4s ease;
+      z-index: 1;
+    }
+
+    .cake-card.revealed .cake-overlay {
+      opacity: 0; backdrop-filter: blur(0px);
+      pointer-events: none;
+    }
+
+    .cake-content {
+      position: relative; z-index: 2;
+      text-align: center; padding: 52px 36px;
+      display: flex; flex-direction: column;
+      align-items: center; gap: 14px;
+      transition: opacity .5s;
+    }
+
+    .cake-card.revealed .cake-content { opacity: 0; pointer-events: none; }
+
+    .cake-icon { font-size: 42px; }
+
+    .cake-h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px; font-weight: 600;
+      color: var(--white); line-height: 1.3;
+    }
+
+    .cake-sub { font-size: 14px; color: var(--white-55, rgba(255,255,255,.55)); }
+
+    .cake-hint {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid var(--border);
+      border-radius: 30px; padding: 9px 22px;
+      font-size: 13px; color: var(--white-60);
+      margin-top: 4px;
+    }
+
+    .cake-wish {
+      position: absolute; inset: 0; z-index: 3;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; padding: 52px 40px;
+      opacity: 0; pointer-events: none;
+      transition: opacity 1.2s .6s;
+    }
+
+    .cake-card.revealed .cake-wish { opacity: 1; pointer-events: auto; }
+
+    .cake-wish-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(19px, 3vw, 25px);
+      color: var(--white); line-height: 1.7;
+      margin-bottom: 14px;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.6);
+    }
+
+    .cake-wish-sub {
+      font-size: 14px; color: rgba(255,255,255,.65);
+      letter-spacing: 0.3px;
+    }
+
+    /* ── CLOSING ──────────────────────────────────────── */
+    .closing-section {
+      padding: 110px 24px 90px;
       text-align: center;
     }
 
-    /* Success / error states */
-    .form-message {
-      display: none;
-      padding: 16px 20px;
-      border-radius: 10px;
-      font-size: 15px;
-      font-weight: 600;
-      text-align: center;
-      margin-bottom: 20px;
+    .closing-h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(38px, 6vw, 68px);
+      font-weight: 600; color: var(--white);
+      line-height: 1.2; margin-bottom: 28px;
     }
 
-    .form-message.success {
-      display: block;
-      background: #ecfdf5;
-      color: #065f46;
-      border: 1px solid #a7f3d0;
+    .closing-badge {
+      display: inline-block;
+      background: rgba(201,162,39,0.13);
+      border: 1px solid var(--border-gold);
+      border-radius: 40px; padding: 9px 26px;
+      font-size: 13px; letter-spacing: 1px;
+      color: var(--gold-light);
+      margin-bottom: 52px;
     }
 
-    .form-message.error {
-      display: block;
-      background: #fef2f2;
-      color: #991b1b;
-      border: 1px solid #fecaca;
+    .closing-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(22px, 3.5vw, 34px);
+      font-weight: 400; line-height: 1.65;
+      color: var(--white-80);
+      max-width: 680px; margin: 0 auto 36px;
     }
 
-    /* ── FAQ ──────────────────────────────────────────── */
-    .faq-section {
-      background: #fff;
-      padding-top: 96px;
-      padding-bottom: 96px;
+    .closing-sign {
+      font-size: 14px; color: var(--gold-light);
+      letter-spacing: 0.5px;
     }
-
-    .faq-inner {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .faq-h2 {
-      font-family: 'Hanken Grotesk', sans-serif;
-      font-weight: 600;
-      font-size: 32px;
-      color: var(--text-dark);
-      text-align: center;
-      margin-bottom: 8px;
-    }
-
-    .faq-sub {
-      font-size: 16px;
-      color: var(--text-mid);
-      text-align: center;
-      margin-bottom: 64px;
-    }
-
-    .faq-list { display: flex; flex-direction: column; gap: 16px; }
-
-    .faq-item {
-      background: var(--bg-lavender);
-      border: 1px solid var(--border-faint);
-      border-radius: 16px;
-      padding: 25px;
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .faq-q {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .faq-q-text {
-      font-family: 'Hanken Grotesk', sans-serif;
-      font-weight: 600;
-      font-size: 20px;
-      color: var(--text-dark);
-    }
-
-    .faq-arrow {
-      width: 14px;
-      height: 14px;
-      flex-shrink: 0;
-      border-right: 2px solid var(--brand-dark);
-      border-bottom: 2px solid var(--brand-dark);
-      transform: rotate(45deg);
-      transition: transform .25s;
-      margin-top: -4px;
-    }
-
-    .faq-item.open .faq-arrow { transform: rotate(-135deg); margin-top: 4px; }
-
-    .faq-a {
-      font-size: 16px;
-      line-height: 1.6;
-      color: var(--text-mid);
-      margin-top: 16px;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .3s ease;
-    }
-
-    .faq-item.open .faq-a { max-height: 200px; }
 
     /* ── FOOTER ───────────────────────────────────────── */
     footer {
-      background: var(--text-dark);
-      padding: 48px max(24px, calc((100% - 1280px)/2 + 64px));
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 24px;
-      flex-wrap: wrap;
+      padding: 72px 24px 44px;
+      text-align: center;
+      border-top: 1px solid var(--white-06);
     }
 
-    .footer-logo {
-      font-family: 'Hanken Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 18px;
-      color: #fff;
-      letter-spacing: -0.36px;
+    .footer-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px; font-weight: 500;
+      color: var(--gold-light); margin-bottom: 10px;
     }
 
-    .footer-copy {
-      font-size: 14px;
-      color: rgba(255,255,255,.45);
+    .footer-sub {
+      font-size: 13px; color: var(--white-40);
+      letter-spacing: 0.5px; margin-bottom: 36px;
     }
 
-    /* ── RESPONSIVE ───────────────────────────────────── */
-    @media (max-width: 900px) {
-      .hero-inner { flex-direction: column; }
-      .stats-grid { grid-template-columns: 1fr; }
-      .audit-wrap { flex-direction: column; padding: 40px 28px; }
-      .testi-grid { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-      .form-wrap { padding: 40px 28px; }
-      .audit-grid { grid-template-columns: 1fr; }
-      .audit-card.offset { margin-top: 0; }
-      nav { padding: 0 24px; }
-      .nav-links { display: none; }
+    .social-icons {
+      display: flex; justify-content: center;
+      gap: 20px; margin-bottom: 44px;
     }
 
-    @media (max-width: 640px) {
-      .hero { padding-top: 64px; padding-bottom: 64px; }
-      .section-wrap {
-        padding-left: 24px;
-        padding-right: 24px;
-      }
+    .social-btn {
+      width: 44px; height: 44px; border-radius: 50%;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; color: var(--white-60);
+      text-decoration: none;
+      transition: border-color .2s, color .2s, transform .15s, background .2s;
+    }
+
+    .social-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
+      background: rgba(201,162,39,0.08);
+      transform: translateY(-2px);
+    }
+
+    .footer-made {
+      font-size: 12px; color: rgba(255,255,255,.28);
+      letter-spacing: 0.5px;
+    }
+
+    /* ── TOAST ────────────────────────────────────────── */
+    #toast {
+      position: fixed; bottom: 36px;
+      left: 50%; transform: translateX(-50%) translateY(16px);
+      background: rgba(21,8,38,0.96);
+      border: 1px solid var(--border-gold);
+      color: var(--gold-pale);
+      font-size: 14px; padding: 13px 30px;
+      border-radius: 40px; opacity: 0;
+      transition: opacity .4s, transform .4s;
+      z-index: 9999; pointer-events: none;
+      white-space: nowrap;
+    }
+
+    #toast.show {
+      opacity: 1; transform: translateX(-50%) translateY(0);
+    }
+
+    /* ── Particles ─────────────────────────────────────── */
+    .confetti-piece, .sparkle-fly {
+      position: fixed; pointer-events: none; z-index: 9999;
+      border-radius: 2px; opacity: 0;
+    }
+
+    /* ── ANIMATIONS ───────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes sparkleOut {
+      0%   { opacity: 1; transform: translate(-50%,-50%) scale(1); }
+      100% { opacity: 0; transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(0.3); }
+    }
+
+    @keyframes confettiFall {
+      0%   { opacity: 1; transform: translate(0,0) rotate(0deg); }
+      100% { opacity: 0; transform: translate(var(--tx), var(--ty)) rotate(var(--rot)); }
+    }
+
+    @keyframes heartFloat {
+      0%   { opacity: 1; transform: translate(-50%,-50%) scale(1); }
+      100% { opacity: 0; transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(.6); }
+    }
+
+    /* Scroll-reveal */
+    .reveal {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity .85s ease, transform .85s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .cd-item { width: 70px; height: 80px; }
+      .cd-num  { font-size: 28px; }
+      .hero-card { padding: 24px 20px; }
     }
   </style>
 </head>
 <body>
 
-<!-- ── NAV ──────────────────────────────────────────────── -->
-<nav>
-  <div class="nav-logo">ExecutiveBrand</div>
-  <ul class="nav-links">
-    <li><a href="#stats">Results</a></li>
-    <li><a href="#audit">₹1 Audit</a></li>
-    <li><a href="#testimonials">Clients</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="#form" class="nav-cta">Get Started</a></li>
-  </ul>
+<canvas id="starCanvas"></canvas>
+
+<!-- NAV -->
+<nav class="layer">
+  <a href="#hero" class="active">For Sherina</a>
+  <a href="#closing">Wishes</a>
 </nav>
 
-<!-- ── HERO ─────────────────────────────────────────────── -->
-<section class="hero section-wrap">
-  <div class="hero-inner">
-    <div class="hero-copy">
-      <div class="hero-eyebrow">Master Your Professional Narrative</div>
-      <h1 class="hero-h1">Turn Your LinkedIn From<br>Invisible to Influential</h1>
-      <p class="hero-sub">We build elite personal brands for founders and high-level executives. Stop hoping for opportunities and start attracting them through strategic authority building.</p>
-      <div class="hero-btns">
-        <a href="https://payments.cashfree.com/forms/getaudit" target="_blank" class="btn-primary">Get Your Profile Audit</a>
-        <a href="#form" class="btn-outline">Start Growing Today</a>
+<!-- HERO -->
+<section class="hero layer" id="hero">
+  <div class="hero-eyebrow">Happy Birthday</div>
+  <h1 class="hero-name">Anto Sherina ✨</h1>
+  <p class="hero-tagline">"A beautiful soul born to make the world softer, brighter, and happier."</p>
+  <div class="hero-card">
+    <p>Some people walk into life quietly… Your curly hair dances like poetry, a reflection of the beautiful complexity within you.</p>
+    <p>"Like moonlight touching calm waves, you bring peace wherever you go."</p>
+  </div>
+  <a href="#countdown" class="btn-surprise">Open Your Birthday Surprise 🎁</a>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="countdown-section layer reveal" id="countdown">
+  <h2 class="countdown-title">A Beautiful Journey Since 18 May 2005 ❤️</h2>
+  <div class="countdown-grid">
+    <div class="cd-item"><div class="cd-num" id="cd-years">19</div><div class="cd-label">Years</div></div>
+    <div class="cd-item"><div class="cd-num" id="cd-days">365+</div><div class="cd-label">Days</div></div>
+    <div class="cd-item"><div class="cd-num" id="cd-hours">24</div><div class="cd-label">Hours</div></div>
+    <div class="cd-item"><div class="cd-num" id="cd-minutes">60</div><div class="cd-label">Minutes</div></div>
+    <div class="cd-item"><div class="cd-num" id="cd-seconds">42</div><div class="cd-label">Seconds</div></div>
+  </div>
+</section>
+
+<!-- CAKE -->
+<section class="cake-section layer" id="cake">
+  <div class="cake-outer">
+    <div class="cake-card reveal" id="cakeCard" onclick="revealCake()">
+      <img class="cake-bg-img" src="https://www.figma.com/api/mcp/asset/de882a40-334d-4847-aeaa-c714d7818ce3" alt="birthday" />
+      <div class="cake-overlay"></div>
+      <div class="cake-content">
+        <div class="cake-icon">🎂</div>
+        <h2 class="cake-h2">Touch the Birthday Cake 🎂</h2>
+        <p class="cake-sub">Make a promise upon before you reveal the sweetness…</p>
+        <div class="cake-hint">Make a Wish ✨ &amp; Rise</div>
       </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-img-wrap">
-        <img src="https://www.figma.com/api/mcp/asset/39f45824-a39c-4e99-9270-8c2daa984e4b" alt="Corporate strategy session" />
+      <div class="cake-wish">
+        <p class="cake-wish-text">"May your life always stay as sweet as this cake…<br>and every candle you blow bring your closest dreams to light."</p>
+        <p class="cake-wish-sub">Happy Birthday, Anto Sherina 🌸</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── STATS ─────────────────────────────────────────────── -->
-<section class="stats-section" id="stats">
-  <div class="section-wrap">
-    <h2 class="section-label">Real Growth. Real Results.</h2>
-    <p class="section-sub">The metrics that define modern authority.</p>
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-icon">
-          <img src="https://www.figma.com/api/mcp/asset/77a99c21-c092-476f-9c7f-1e392c504a0e" alt="" />
-        </div>
-        <div class="stat-num">100+</div>
-        <div class="stat-title">Professionals Helped</div>
-        <div class="stat-desc">From Fortune 500 VPs to boutique agency founders.</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon">
-          <img src="https://www.figma.com/api/mcp/asset/e28745aa-84e4-47aa-80b0-90bdf97044a5" alt="" />
-        </div>
-        <div class="stat-num">15k+</div>
-        <div class="stat-title">Inbound Leads</div>
-        <div class="stat-desc">Generated through high-impact content and authority positioning.</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon">
-          <img src="https://www.figma.com/api/mcp/asset/0aa110b6-78cd-4c98-955e-783f2ecb0814" alt="" />
-        </div>
-        <div class="stat-num">0 to 1</div>
-        <div class="stat-title">Brand Scaling</div>
-        <div class="stat-desc">Turning invisible profiles into industry-leading voices from scratch.</div>
-      </div>
-    </div>
-  </div>
+<!-- CLOSING -->
+<section class="closing-section layer reveal" id="closing">
+  <h2 class="closing-h2">Once Again… Happy Birthday 🎉</h2>
+  <div class="closing-badge">To the Moon and Back</div>
+  <blockquote class="closing-quote">"May your heart always remain soft, your smile stay as radiant as the dawn, and your journey be filled with as much light as you give."</blockquote>
+  <p class="closing-sign">Keep shining beautifully, Anto Sherina ❤️</p>
 </section>
 
-<!-- ── RUPEE 1 AUDIT ─────────────────────────────────────── -->
-<section class="audit-section" id="audit">
-  <div class="section-wrap">
-    <div class="audit-wrap">
-      <div class="audit-copy">
-        <h2 class="audit-h2">The Power of Precision:<br>Your Rupee 1 Audit</h2>
-        <p class="audit-p">We offer a comprehensive diagnostic for just ₹1 to prove our value before you invest. No fluff, just high-impact brand direction.</p>
-        <ul class="audit-list">
-          <li><span class="audit-check"></span> Complete Profile Visual &amp; Bio Review</li>
-          <li><span class="audit-check"></span> Strategic Content Gap Analysis</li>
-          <li><span class="audit-check"></span> Personal Brand Authority Roadmap</li>
-        </ul>
-        <a href="https://payments.cashfree.com/forms/getaudit" target="_blank" class="btn-audit">Claim Your Audit for ₹1</a>
-      </div>
-      <div class="audit-cards">
-        <div class="audit-grid">
-          <div class="audit-card">
-            <div class="audit-card-label">Review</div>
-            <div class="audit-card-title">Profile Diagnostic</div>
-          </div>
-          <div class="audit-card offset">
-            <div class="audit-card-label">Analysis</div>
-            <div class="audit-card-title">Hook &amp; Loop Content</div>
-          </div>
-          <div class="audit-card">
-            <div class="audit-card-label">Direction</div>
-            <div class="audit-card-title">Brand Voice Guide</div>
-          </div>
-          <div class="audit-card offset">
-            <div class="audit-card-label">Bonus</div>
-            <div class="audit-card-title">Elite Lead Magnet</div>
-          </div>
-        </div>
-      </div>
-    </div>
+<!-- FOOTER -->
+<footer class="layer reveal">
+  <div class="footer-name">Anto Sherina</div>
+  <div class="footer-sub">Happy Birthday Anto Sherina</div>
+  <div class="social-icons">
+    <a class="social-btn" title="Share" onclick="shareUrl()">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+      </svg>
+    </a>
+    <a class="social-btn" title="Love" onclick="burstHearts(event)">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+      </svg>
+    </a>
+    <a class="social-btn" title="Celebrate" onclick="launchConfetti()">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+      </svg>
+    </a>
   </div>
-</section>
-
-<!-- ── TESTIMONIALS ──────────────────────────────────────── -->
-<section class="testi-section" id="testimonials">
-  <div class="section-wrap">
-    <h2 class="section-label" style="color:var(--text-dark)">Expert Perspectives</h2>
-    <p class="section-sub">Don't take our word for it — listen to our clients.</p>
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="testi-qq">"</div>
-        <p class="testi-quote">"ExecutiveBrand saved me months of trial and error. Before them, I was posting into a void. Now, I have recruiters and partners reaching out to me every single week."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">
-            <img src="https://www.figma.com/api/mcp/asset/38b1a11f-538a-4f4d-97df-3f62a1cadbfc" alt="David Chen" />
-          </div>
-          <div>
-            <div class="testi-name">David Chen</div>
-            <div class="testi-role">VP of Operations, TechScale</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-qq">"</div>
-        <p class="testi-quote">"The content strategy they provided was revolutionary. It felt like my own voice, but amplified and refined. The inbound leads have paid for the service 10x over."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">
-            <img src="https://www.figma.com/api/mcp/asset/987521ca-582f-411a-b9c8-707aeb613375" alt="Sarah Jenkins" />
-          </div>
-          <div>
-            <div class="testi-name">Sarah Jenkins</div>
-            <div class="testi-role">Founder, GrowthPath Agency</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── LEAD FORM ─────────────────────────────────────────── -->
-<section class="form-section" id="form">
-  <div class="section-wrap">
-    <div class="form-wrap">
-      <h2 class="form-title">Let's Build Your LinkedIn Presence Together</h2>
-      <p class="form-sub">The first step to authority is a conversation.</p>
-
-      <div id="formMessage" class="form-message"></div>
-
-      <div class="form-row">
-        <div class="field-group">
-          <label class="field-label" for="fname">Full Name</label>
-          <input class="field-input" id="fname" type="text" placeholder="John Doe" autocomplete="name" />
-        </div>
-        <div class="field-group">
-          <label class="field-label" for="femail">Email Address</label>
-          <input class="field-input" id="femail" type="email" placeholder="john@company.com" autocomplete="email" />
-        </div>
-      </div>
-
-      <div class="field-full">
-        <div class="field-group">
-          <label class="field-label" for="fphone">Phone Number</label>
-          <input class="field-input" id="fphone" type="tel" placeholder="+91 98765 43210" autocomplete="tel" />
-        </div>
-      </div>
-
-      <button class="btn-submit" id="submitBtn" onclick="submitForm()">Get My Growth Plan</button>
-      <p class="form-privacy">We respect your privacy. No spam, ever.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ── FAQ ───────────────────────────────────────────────── -->
-<section class="faq-section" id="faq">
-  <div class="section-wrap">
-    <div class="faq-inner">
-      <h2 class="faq-h2">Frequently Asked Questions</h2>
-      <p class="faq-sub">Everything you need to know about the elite growth journey.</p>
-      <div class="faq-list">
-        <div class="faq-item" onclick="toggleFaq(this)">
-          <div class="faq-q">
-            <span class="faq-q-text">Who is this service for?</span>
-            <span class="faq-arrow"></span>
-          </div>
-          <div class="faq-a">Our services are specifically designed for founders, CEOs, and high-level executives who need to build professional authority but lack the time to manage their own presence.</div>
-        </div>
-        <div class="faq-item" onclick="toggleFaq(this)">
-          <div class="faq-q">
-            <span class="faq-q-text">How much time do I need to invest?</span>
-            <span class="faq-arrow"></span>
-          </div>
-          <div class="faq-a">We pride ourselves on being low-touch. After an initial onboarding call, we only require 30–45 minutes of your time per month for strategy alignment.</div>
-        </div>
-        <div class="faq-item" onclick="toggleFaq(this)">
-          <div class="faq-q">
-            <span class="faq-q-text">Do you write the content for me?</span>
-            <span class="faq-arrow"></span>
-          </div>
-          <div class="faq-a">Yes. We capture your brand voice through our unique "Voice Mirroring" interview process and handle all drafting, editing, and scheduling.</div>
-        </div>
-        <div class="faq-item" onclick="toggleFaq(this)">
-          <div class="faq-q">
-            <span class="faq-q-text">How soon will I see results?</span>
-            <span class="faq-arrow"></span>
-          </div>
-          <div class="faq-a">While profile optimisation has an immediate effect on your credibility, significant inbound activity typically scales up between 60 to 90 days of consistent execution.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── FOOTER ─────────────────────────────────────────────── -->
-<footer>
-  <div class="footer-logo">ExecutiveBrand</div>
-  <div class="footer-copy">© 2025 ExecutiveBrand. All rights reserved.</div>
+  <p class="footer-made">Made with love for a beautiful soul • 2024</p>
 </footer>
 
+<div id="toast">🔗 Link copied!</div>
+
 <script>
-  // ── AppScript endpoint ──────────────────────────────────
-  var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxx8xeNI_EZIUkGbB8tA9DkKWnmrr0rxzmEoOyCNzZ8SRxm3ckFuoaWeZDZ_s9eJex5/exec";
+/* ── Starfield ─────────────────────────────────────────── */
+(function(){
+  const c   = document.getElementById('starCanvas');
+  const ctx = c.getContext('2d');
+  let stars = [], W, H;
 
-  // ── Form submit ─────────────────────────────────────────
-  function submitForm() {
-    var name  = document.getElementById("fname").value.trim();
-    var email = document.getElementById("femail").value.trim();
-    var phone = document.getElementById("fphone").value.trim();
-    var btn   = document.getElementById("submitBtn");
-    var msg   = document.getElementById("formMessage");
+  function resize(){ W = c.width = innerWidth; H = c.height = innerHeight; }
 
-    // Basic validation
-    if (!name || !email || !phone) {
-      showMsg("error", "Please fill in all three fields before submitting.");
-      return;
-    }
-
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      showMsg("error", "Please enter a valid email address.");
-      return;
-    }
-
-    btn.disabled = true;
-    btn.textContent = "Submitting…";
-    msg.className = "form-message";
-    msg.style.display = "none";
-
-    // Build GET URL — works on file:// with no-cors
-    var url = SCRIPT_URL + "?" + new URLSearchParams({ name: name, email: email, phone: phone });
-
-    fetch(url, { method: "GET", mode: "no-cors" })
-      .then(function() { showSuccess(); })
-      .catch(function() { showError(); });
+  function seed(){
+    stars = Array.from({length:170}, () => ({
+      x: Math.random()*W, y: Math.random()*H,
+      r: Math.random()*1.5+0.25,
+      phase: Math.random()*Math.PI*2,
+      speed: Math.random()*.005+.002
+    }));
   }
 
-  function showSuccess() {
-    var btn = document.getElementById("submitBtn");
-    btn.disabled = false;
-    btn.textContent = "Get My Growth Plan";
-
-    // Clear fields
-    document.getElementById("fname").value  = "";
-    document.getElementById("femail").value = "";
-    document.getElementById("fphone").value = "";
-
-    showMsg("success", "🎉 Thank you! We'll be in touch within 24 hours.");
-  }
-
-  function showError() {
-    var btn = document.getElementById("submitBtn");
-    btn.disabled = false;
-    btn.textContent = "Get My Growth Plan";
-    showMsg("error", "Submission sent! (If you see this, check your Google Sheet — it may still have recorded.)");
-  }
-
-  function showMsg(type, text) {
-    var msg = document.getElementById("formMessage");
-    msg.className = "form-message " + type;
-    msg.textContent = text;
-    msg.style.display = "block";
-    msg.scrollIntoView({ behavior: "smooth", block: "nearest" });
-  }
-
-  // ── FAQ accordion ───────────────────────────────────────
-  function toggleFaq(el) {
-    var isOpen = el.classList.contains("open");
-    document.querySelectorAll(".faq-item.open").forEach(function(i) {
-      i.classList.remove("open");
+  function draw(t){
+    ctx.clearRect(0,0,W,H);
+    stars.forEach(s => {
+      const a = .15 + .8*(0.5 + 0.5*Math.sin(t*s.speed + s.phase));
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
+      ctx.fillStyle = `rgba(255,255,255,${a})`;
+      ctx.fill();
     });
-    if (!isOpen) el.classList.add("open");
+    requestAnimationFrame(draw);
   }
+
+  resize(); seed();
+  addEventListener('resize', () => { resize(); seed(); });
+  requestAnimationFrame(draw);
+})();
+
+/* ── Countdown ─────────────────────────────────────────── */
+function tick(){
+  const birth = new Date('2005-05-18T00:00:00');
+  const now   = new Date();
+  const diff  = now - birth;
+  const ts    = Math.floor(diff/1000);
+  const tm    = Math.floor(ts/60);
+  const th    = Math.floor(tm/60);
+  const td    = Math.floor(th/24);
+  const yr    = Math.floor(td/365.25);
+
+  document.getElementById('cd-years').textContent   = yr;
+  document.getElementById('cd-days').textContent    = td.toLocaleString();
+  document.getElementById('cd-hours').textContent   = String(th%24).padStart(2,'0');
+  document.getElementById('cd-minutes').textContent = String(tm%60).padStart(2,'0');
+  document.getElementById('cd-seconds').textContent = String(ts%60).padStart(2,'0');
+}
+tick(); setInterval(tick, 1000);
+
+/* ── Scroll reveal ─────────────────────────────────────── */
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+/* ── Nav active ────────────────────────────────────────── */
+addEventListener('scroll', () => {
+  const links = document.querySelectorAll('nav a');
+  links.forEach(a => a.classList.remove('active'));
+  links[scrollY > innerHeight*.6 ? 1 : 0].classList.add('active');
+});
+
+/* ── Smooth anchors ────────────────────────────────────── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
+  });
+});
+
+/* ── Cake reveal ───────────────────────────────────────── */
+function revealCake(){
+  const card = document.getElementById('cakeCard');
+  if(card.classList.contains('revealed')) return;
+  card.classList.add('revealed');
+
+  /* sparkle burst */
+  const emojis = ['✨','🌸','🎂','⭐','💛','🌟','💫','🎉','🌺'];
+  for(let i=0; i<14; i++){
+    const s   = document.createElement('span');
+    const ang = (i/14)*360;
+    const d   = 80 + Math.random()*70;
+    const tx  = Math.cos(ang*Math.PI/180)*d;
+    const ty  = Math.sin(ang*Math.PI/180)*d;
+    s.style.cssText = `
+      position:absolute; left:50%; top:50%;
+      font-size:${16+Math.random()*16}px;
+      pointer-events:none; z-index:10;
+      --tx:${tx}px; --ty:${ty}px;
+      animation: sparkleOut .8s ${i*.05}s ease-out forwards;
+    `;
+    s.textContent = emojis[i % emojis.length];
+    card.appendChild(s);
+    setTimeout(() => s.remove(), 1400);
+  }
+  setTimeout(launchConfetti, 700);
+}
+
+/* ── Confetti ──────────────────────────────────────────── */
+function launchConfetti(){
+  const cols = ['#c9a227','#e4bf5a','#a855f7','#e879a0','#ffffff','#60a5fa','#f472b6'];
+  for(let i=0; i<90; i++){
+    const el   = document.createElement('div');
+    el.className = 'confetti-piece';
+    const sz   = 6 + Math.random()*8;
+    const tx   = (Math.random()-.5)*innerWidth*1.3+'px';
+    const ty   = (innerHeight+180)+'px';
+    const rot  = (Math.random()-.5)*760+'deg';
+    el.style.cssText = `
+      width:${sz}px; height:${sz}px;
+      background:${cols[Math.floor(Math.random()*cols.length)]};
+      left:${Math.random()*100}vw; top:-18px;
+      border-radius:${Math.random()>.5?'50%':'2px'};
+      --tx:${tx}; --ty:${ty}; --rot:${rot};
+      animation: confettiFall ${1.4+Math.random()*1.6}s ${Math.random()*.5}s ease-in forwards;
+    `;
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 3200);
+  }
+}
+
+/* ── Heart burst ───────────────────────────────────────── */
+function burstHearts(e){
+  const emojis = ['❤️','🩷','💛','🌸','✨','💕'];
+  for(let i=0; i<12; i++){
+    const el = document.createElement('div');
+    const tx = (Math.random()-.5)*180;
+    const ty = -(60+Math.random()*100);
+    el.style.cssText = `
+      position:fixed;
+      left:${e.clientX}px; top:${e.clientY}px;
+      font-size:${14+Math.random()*14}px;
+      pointer-events:none; z-index:9999;
+      --tx:${tx}px; --ty:${ty}px;
+      animation: heartFloat 1.1s ${i*.06}s ease-out forwards;
+    `;
+    el.textContent = emojis[i % emojis.length];
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 1300);
+  }
+}
+
+/* ── Share ─────────────────────────────────────────────── */
+function shareUrl(){
+  const url = location.href;
+  if(navigator.share){
+    navigator.share({title:'Happy Birthday Anto Sherina ✨', url});
+  } else {
+    navigator.clipboard.writeText(url).then(() => {
+      const t = document.getElementById('toast');
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2600);
+    });
+  }
+}
+
+/* ── Subtle parallax ───────────────────────────────────── */
+addEventListener('scroll', () => {
+  const h = document.querySelector('.hero');
+  if(h) h.style.transform = `translateY(${scrollY*.16}px)`;
+});
 </script>
 </body>
 </html>
