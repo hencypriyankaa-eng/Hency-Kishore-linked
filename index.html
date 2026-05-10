@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ExecutiveBrand — Turn Your LinkedIn From Invisible to Influential</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand-dark:   #005d8f;
+      --brand-mid:    #0077b5;
+      --brand-light:  #cde5ff;
+      --brand-pale:   #c6e7ff;
+      --bg-lavender:  #f2f3ff;
+      --bg-soft:      #faf8ff;
+      --bg-form:      #eaedff;
+      --text-dark:    #131b2e;
+      --text-mid:     #404850;
+      --text-muted:   rgba(64,72,80,0.7);
+      --text-subtle:  rgba(64,72,80,0.6);
+      --border-light: rgba(191,199,209,0.3);
+      --border-med:   rgba(191,199,209,0.5);
+      --border-faint: rgba(191,199,209,0.2);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ──────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-faint);
+      padding: 0 max(24px, calc((100% - 1280px)/2 + 64px));
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--brand-dark);
+      letter-spacing: -0.4px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-mid);
+      text-decoration: none;
+      letter-spacing: 0.4px;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover { color: var(--brand-dark); }
+
+    .nav-cta {
+      background: var(--brand-mid);
+      color: #fff !important;
+      padding: 10px 22px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1);
+    }
+
+    /* ── SECTION WRAPPER ──────────────────────────────── */
+    .section-wrap {
+      width: 100%;
+      padding-left:  max(24px, calc((100% - 1280px)/2 + 64px));
+      padding-right: max(24px, calc((100% - 1280px)/2 + 64px));
+    }
+
+    /* ── HERO ─────────────────────────────────────────── */
+    .hero {
+      padding-top: 100px;
+      padding-bottom: 100px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      display: flex;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-copy { flex: 1; }
+
+    .hero-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--brand-dark);
+      margin-bottom: 16px;
+    }
+
+    .hero-h1 {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: clamp(36px, 4vw, 48px);
+      line-height: 1.17;
+      letter-spacing: -0.96px;
+      color: var(--text-dark);
+      margin-bottom: 20px;
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--text-mid);
+      max-width: 576px;
+      margin-bottom: 40px;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--brand-mid);
+      color: #f3f7ff;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.7px;
+      padding: 14px 32px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1);
+      transition: transform .15s, box-shadow .15s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 16px -2px rgba(0,0,0,.15); }
+
+    .btn-outline {
+      border: 1.5px solid var(--brand-dark);
+      color: var(--brand-dark);
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.7px;
+      padding: 13px 32px;
+      border-radius: 8px;
+      background: transparent;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .15s, color .15s;
+      display: inline-block;
+    }
+
+    .btn-outline:hover { background: var(--brand-dark); color: #fff; }
+
+    .hero-visual {
+      flex: 1;
+      position: relative;
+    }
+
+    .hero-visual::before {
+      content: '';
+      position: absolute;
+      top: -24px; right: -24px;
+      width: 128px; height: 128px;
+      border-radius: 12px;
+      background: rgba(205,229,255,0.2);
+      filter: blur(32px);
+      pointer-events: none;
+    }
+
+    .hero-visual::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; left: -40px;
+      width: 192px; height: 192px;
+      border-radius: 12px;
+      background: rgba(198,231,255,0.3);
+      filter: blur(32px);
+      pointer-events: none;
+    }
+
+    .hero-img-wrap {
+      border: 1px solid rgba(191,199,209,0.3);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
+      aspect-ratio: 4/3;
+      width: 100%;
+      position: relative;
+    }
+
+    .hero-img-wrap img {
+      width: 100%;
+      height: 133.33%;
+      object-fit: cover;
+      position: absolute;
+      top: -16.67%;
+      left: 0;
+    }
+
+    /* ── STATS ────────────────────────────────────────── */
+    .stats-section {
+      background: var(--bg-lavender);
+      padding-top: 96px;
+      padding-bottom: 96px;
+    }
+
+    .section-label {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 1.25;
+      color: var(--brand-dark);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .section-sub {
+      font-size: 16px;
+      color: var(--text-mid);
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .stat-card {
+      background: #fff;
+      border: 1px solid var(--border-faint);
+      border-radius: 16px;
+      padding: 33px;
+      box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    }
+
+    .stat-icon {
+      height: 30px;
+      margin-bottom: 12px;
+    }
+
+    .stat-icon img { height: 100%; width: auto; }
+
+    .stat-num {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      letter-spacing: -0.72px;
+      color: var(--brand-dark);
+      line-height: 1.17;
+      margin-bottom: 4px;
+    }
+
+    .stat-title {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 24px;
+      color: var(--text-mid);
+      line-height: 1.33;
+      margin-bottom: 8px;
+    }
+
+    .stat-desc {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ── AUDIT CTA ────────────────────────────────────── */
+    .audit-section {
+      padding-top: 96px;
+      padding-bottom: 96px;
+      background: #fff;
+    }
+
+    .audit-wrap {
+      background: var(--brand-dark);
+      border-radius: 24px;
+      padding: 64px;
+      display: flex;
+      gap: 48px;
+      align-items: center;
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .audit-copy { flex: 1; }
+
+    .audit-h2 {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: clamp(32px, 3.5vw, 48px);
+      letter-spacing: -0.96px;
+      color: #fff;
+      line-height: 1.17;
+      margin-bottom: 24px;
+    }
+
+    .audit-p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--brand-light);
+      margin-bottom: 32px;
+    }
+
+    .audit-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .audit-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 16px;
+      color: #fff;
+      line-height: 1.5;
+    }
+
+    .audit-check {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .audit-check::after {
+      content: '✓';
+      font-size: 11px;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .btn-audit {
+      display: inline-block;
+      background: var(--bg-soft);
+      color: var(--brand-dark);
+      font-weight: 700;
+      font-size: 16px;
+      padding: 16px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform .15s, box-shadow .15s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-audit:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.2); }
+
+    .audit-cards { flex: 1; }
+
+    .audit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .audit-card {
+      background: var(--brand-mid);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,.05);
+    }
+
+    .audit-card.offset { margin-top: 32px; }
+
+    .audit-card-label {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.7px;
+      color: var(--brand-pale);
+      margin-bottom: 8px;
+    }
+
+    .audit-card-title {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-size: 16px;
+      color: #fff;
+      line-height: 1.5;
+    }
+
+    /* ── TESTIMONIALS ─────────────────────────────────── */
+    .testi-section {
+      background: var(--bg-soft);
+      padding-top: 96px;
+      padding-bottom: 96px;
+    }
+
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .testi-card {
+      background: #fff;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 41px;
+      box-shadow: 0 1px 1px rgba(0,0,0,.05);
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      position: relative;
+    }
+
+    .testi-quote {
+      font-style: italic;
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--text-dark);
+    }
+
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .testi-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--brand-light);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .testi-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+    .testi-name {
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--text-dark);
+      line-height: 1.5;
+    }
+
+    .testi-role {
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.7px;
+      color: var(--text-mid);
+    }
+
+    .testi-qq {
+      position: absolute;
+      top: 32px; right: 32px;
+      font-family: Georgia, serif;
+      font-size: 72px;
+      color: var(--brand-light);
+      line-height: 0.6;
+      user-select: none;
+    }
+
+    /* ── LEAD FORM ────────────────────────────────────── */
+    .form-section {
+      background: var(--bg-form);
+      padding-top: 96px;
+      padding-bottom: 96px;
+    }
+
+    .form-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #fff;
+      border: 1px solid var(--border-light);
+      border-radius: 24px;
+      padding: 65px;
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1);
+    }
+
+    .form-title {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 32px;
+      color: var(--text-dark);
+      text-align: center;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .form-sub {
+      font-size: 16px;
+      color: var(--text-mid);
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .field-group { display: flex; flex-direction: column; gap: 8px; }
+
+    .field-label {
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.7px;
+      color: var(--text-mid);
+    }
+
+    .field-input {
+      background: var(--bg-soft);
+      border: 1px solid var(--border-med);
+      border-radius: 8px;
+      padding: 15px 17px;
+      font-size: 16px;
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+      width: 100%;
+    }
+
+    .field-input::placeholder { color: #6b7280; }
+    .field-input:focus { border-color: var(--brand-dark); box-shadow: 0 0 0 3px rgba(0,93,143,.12); }
+
+    .field-full { margin-bottom: 24px; }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--brand-dark);
+      color: #fff;
+      font-weight: 700;
+      font-size: 18px;
+      padding: 16px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1);
+      transition: transform .15s, box-shadow .15s, background .15s;
+      margin-bottom: 16px;
+    }
+
+    .btn-submit:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 14px 20px -4px rgba(0,0,0,.15); }
+    .btn-submit:disabled { opacity: .7; cursor: not-allowed; }
+
+    .form-privacy {
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.7px;
+      color: var(--text-subtle);
+      text-align: center;
+    }
+
+    /* Success / error states */
+    .form-message {
+      display: none;
+      padding: 16px 20px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-message.success {
+      display: block;
+      background: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+    }
+
+    .form-message.error {
+      display: block;
+      background: #fef2f2;
+      color: #991b1b;
+      border: 1px solid #fecaca;
+    }
+
+    /* ── FAQ ──────────────────────────────────────────── */
+    .faq-section {
+      background: #fff;
+      padding-top: 96px;
+      padding-bottom: 96px;
+    }
+
+    .faq-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-h2 {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 32px;
+      color: var(--text-dark);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .faq-sub {
+      font-size: 16px;
+      color: var(--text-mid);
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .faq-list { display: flex; flex-direction: column; gap: 16px; }
+
+    .faq-item {
+      background: var(--bg-lavender);
+      border: 1px solid var(--border-faint);
+      border-radius: 16px;
+      padding: 25px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .faq-q {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .faq-q-text {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--text-dark);
+    }
+
+    .faq-arrow {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      border-right: 2px solid var(--brand-dark);
+      border-bottom: 2px solid var(--brand-dark);
+      transform: rotate(45deg);
+      transition: transform .25s;
+      margin-top: -4px;
+    }
+
+    .faq-item.open .faq-arrow { transform: rotate(-135deg); margin-top: 4px; }
+
+    .faq-a {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-mid);
+      margin-top: 16px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .3s ease;
+    }
+
+    .faq-item.open .faq-a { max-height: 200px; }
+
+    /* ── FOOTER ───────────────────────────────────────── */
+    footer {
+      background: var(--text-dark);
+      padding: 48px max(24px, calc((100% - 1280px)/2 + 64px));
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-logo {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: #fff;
+      letter-spacing: -0.36px;
+    }
+
+    .footer-copy {
+      font-size: 14px;
+      color: rgba(255,255,255,.45);
+    }
+
+    /* ── RESPONSIVE ───────────────────────────────────── */
+    @media (max-width: 900px) {
+      .hero-inner { flex-direction: column; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .audit-wrap { flex-direction: column; padding: 40px 28px; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .form-wrap { padding: 40px 28px; }
+      .audit-grid { grid-template-columns: 1fr; }
+      .audit-card.offset { margin-top: 0; }
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding-top: 64px; padding-bottom: 64px; }
+      .section-wrap {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ──────────────────────────────────────────────── -->
+<nav>
+  <div class="nav-logo">ExecutiveBrand</div>
+  <ul class="nav-links">
+    <li><a href="#stats">Results</a></li>
+    <li><a href="#audit">₹1 Audit</a></li>
+    <li><a href="#testimonials">Clients</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#form" class="nav-cta">Get Started</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ─────────────────────────────────────────────── -->
+<section class="hero section-wrap">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="hero-eyebrow">Master Your Professional Narrative</div>
+      <h1 class="hero-h1">Turn Your LinkedIn From<br>Invisible to Influential</h1>
+      <p class="hero-sub">We build elite personal brands for founders and high-level executives. Stop hoping for opportunities and start attracting them through strategic authority building.</p>
+      <div class="hero-btns">
+        <a href="https://payments.cashfree.com/forms/getaudit" target="_blank" class="btn-primary">Get Your Profile Audit</a>
+        <a href="#form" class="btn-outline">Start Growing Today</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img-wrap">
+        <img src="https://www.figma.com/api/mcp/asset/39f45824-a39c-4e99-9270-8c2daa984e4b" alt="Corporate strategy session" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── STATS ─────────────────────────────────────────────── -->
+<section class="stats-section" id="stats">
+  <div class="section-wrap">
+    <h2 class="section-label">Real Growth. Real Results.</h2>
+    <p class="section-sub">The metrics that define modern authority.</p>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">
+          <img src="https://www.figma.com/api/mcp/asset/77a99c21-c092-476f-9c7f-1e392c504a0e" alt="" />
+        </div>
+        <div class="stat-num">100+</div>
+        <div class="stat-title">Professionals Helped</div>
+        <div class="stat-desc">From Fortune 500 VPs to boutique agency founders.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">
+          <img src="https://www.figma.com/api/mcp/asset/e28745aa-84e4-47aa-80b0-90bdf97044a5" alt="" />
+        </div>
+        <div class="stat-num">15k+</div>
+        <div class="stat-title">Inbound Leads</div>
+        <div class="stat-desc">Generated through high-impact content and authority positioning.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">
+          <img src="https://www.figma.com/api/mcp/asset/0aa110b6-78cd-4c98-955e-783f2ecb0814" alt="" />
+        </div>
+        <div class="stat-num">0 to 1</div>
+        <div class="stat-title">Brand Scaling</div>
+        <div class="stat-desc">Turning invisible profiles into industry-leading voices from scratch.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RUPEE 1 AUDIT ─────────────────────────────────────── -->
+<section class="audit-section" id="audit">
+  <div class="section-wrap">
+    <div class="audit-wrap">
+      <div class="audit-copy">
+        <h2 class="audit-h2">The Power of Precision:<br>Your Rupee 1 Audit</h2>
+        <p class="audit-p">We offer a comprehensive diagnostic for just ₹1 to prove our value before you invest. No fluff, just high-impact brand direction.</p>
+        <ul class="audit-list">
+          <li><span class="audit-check"></span> Complete Profile Visual &amp; Bio Review</li>
+          <li><span class="audit-check"></span> Strategic Content Gap Analysis</li>
+          <li><span class="audit-check"></span> Personal Brand Authority Roadmap</li>
+        </ul>
+        <a href="https://payments.cashfree.com/forms/getaudit" target="_blank" class="btn-audit">Claim Your Audit for ₹1</a>
+      </div>
+      <div class="audit-cards">
+        <div class="audit-grid">
+          <div class="audit-card">
+            <div class="audit-card-label">Review</div>
+            <div class="audit-card-title">Profile Diagnostic</div>
+          </div>
+          <div class="audit-card offset">
+            <div class="audit-card-label">Analysis</div>
+            <div class="audit-card-title">Hook &amp; Loop Content</div>
+          </div>
+          <div class="audit-card">
+            <div class="audit-card-label">Direction</div>
+            <div class="audit-card-title">Brand Voice Guide</div>
+          </div>
+          <div class="audit-card offset">
+            <div class="audit-card-label">Bonus</div>
+            <div class="audit-card-title">Elite Lead Magnet</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ──────────────────────────────────────── -->
+<section class="testi-section" id="testimonials">
+  <div class="section-wrap">
+    <h2 class="section-label" style="color:var(--text-dark)">Expert Perspectives</h2>
+    <p class="section-sub">Don't take our word for it — listen to our clients.</p>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-qq">"</div>
+        <p class="testi-quote">"ExecutiveBrand saved me months of trial and error. Before them, I was posting into a void. Now, I have recruiters and partners reaching out to me every single week."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">
+            <img src="https://www.figma.com/api/mcp/asset/38b1a11f-538a-4f4d-97df-3f62a1cadbfc" alt="David Chen" />
+          </div>
+          <div>
+            <div class="testi-name">David Chen</div>
+            <div class="testi-role">VP of Operations, TechScale</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-qq">"</div>
+        <p class="testi-quote">"The content strategy they provided was revolutionary. It felt like my own voice, but amplified and refined. The inbound leads have paid for the service 10x over."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">
+            <img src="https://www.figma.com/api/mcp/asset/987521ca-582f-411a-b9c8-707aeb613375" alt="Sarah Jenkins" />
+          </div>
+          <div>
+            <div class="testi-name">Sarah Jenkins</div>
+            <div class="testi-role">Founder, GrowthPath Agency</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LEAD FORM ─────────────────────────────────────────── -->
+<section class="form-section" id="form">
+  <div class="section-wrap">
+    <div class="form-wrap">
+      <h2 class="form-title">Let's Build Your LinkedIn Presence Together</h2>
+      <p class="form-sub">The first step to authority is a conversation.</p>
+
+      <div id="formMessage" class="form-message"></div>
+
+      <div class="form-row">
+        <div class="field-group">
+          <label class="field-label" for="fname">Full Name</label>
+          <input class="field-input" id="fname" type="text" placeholder="John Doe" autocomplete="name" />
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="femail">Email Address</label>
+          <input class="field-input" id="femail" type="email" placeholder="john@company.com" autocomplete="email" />
+        </div>
+      </div>
+
+      <div class="field-full">
+        <div class="field-group">
+          <label class="field-label" for="fphone">Phone Number</label>
+          <input class="field-input" id="fphone" type="tel" placeholder="+91 98765 43210" autocomplete="tel" />
+        </div>
+      </div>
+
+      <button class="btn-submit" id="submitBtn" onclick="submitForm()">Get My Growth Plan</button>
+      <p class="form-privacy">We respect your privacy. No spam, ever.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ───────────────────────────────────────────────── -->
+<section class="faq-section" id="faq">
+  <div class="section-wrap">
+    <div class="faq-inner">
+      <h2 class="faq-h2">Frequently Asked Questions</h2>
+      <p class="faq-sub">Everything you need to know about the elite growth journey.</p>
+      <div class="faq-list">
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">
+            <span class="faq-q-text">Who is this service for?</span>
+            <span class="faq-arrow"></span>
+          </div>
+          <div class="faq-a">Our services are specifically designed for founders, CEOs, and high-level executives who need to build professional authority but lack the time to manage their own presence.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">
+            <span class="faq-q-text">How much time do I need to invest?</span>
+            <span class="faq-arrow"></span>
+          </div>
+          <div class="faq-a">We pride ourselves on being low-touch. After an initial onboarding call, we only require 30–45 minutes of your time per month for strategy alignment.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">
+            <span class="faq-q-text">Do you write the content for me?</span>
+            <span class="faq-arrow"></span>
+          </div>
+          <div class="faq-a">Yes. We capture your brand voice through our unique "Voice Mirroring" interview process and handle all drafting, editing, and scheduling.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">
+            <span class="faq-q-text">How soon will I see results?</span>
+            <span class="faq-arrow"></span>
+          </div>
+          <div class="faq-a">While profile optimisation has an immediate effect on your credibility, significant inbound activity typically scales up between 60 to 90 days of consistent execution.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-logo">ExecutiveBrand</div>
+  <div class="footer-copy">© 2025 ExecutiveBrand. All rights reserved.</div>
+</footer>
+
+<script>
+  // ── AppScript endpoint ──────────────────────────────────
+  var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxx8xeNI_EZIUkGbB8tA9DkKWnmrr0rxzmEoOyCNzZ8SRxm3ckFuoaWeZDZ_s9eJex5/exec";
+
+  // ── Form submit ─────────────────────────────────────────
+  function submitForm() {
+    var name  = document.getElementById("fname").value.trim();
+    var email = document.getElementById("femail").value.trim();
+    var phone = document.getElementById("fphone").value.trim();
+    var btn   = document.getElementById("submitBtn");
+    var msg   = document.getElementById("formMessage");
+
+    // Basic validation
+    if (!name || !email || !phone) {
+      showMsg("error", "Please fill in all three fields before submitting.");
+      return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showMsg("error", "Please enter a valid email address.");
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = "Submitting…";
+    msg.className = "form-message";
+    msg.style.display = "none";
+
+    // Build GET URL — works on file:// with no-cors
+    var url = SCRIPT_URL + "?" + new URLSearchParams({ name: name, email: email, phone: phone });
+
+    fetch(url, { method: "GET", mode: "no-cors" })
+      .then(function() { showSuccess(); })
+      .catch(function() { showError(); });
+  }
+
+  function showSuccess() {
+    var btn = document.getElementById("submitBtn");
+    btn.disabled = false;
+    btn.textContent = "Get My Growth Plan";
+
+    // Clear fields
+    document.getElementById("fname").value  = "";
+    document.getElementById("femail").value = "";
+    document.getElementById("fphone").value = "";
+
+    showMsg("success", "🎉 Thank you! We'll be in touch within 24 hours.");
+  }
+
+  function showError() {
+    var btn = document.getElementById("submitBtn");
+    btn.disabled = false;
+    btn.textContent = "Get My Growth Plan";
+    showMsg("error", "Submission sent! (If you see this, check your Google Sheet — it may still have recorded.)");
+  }
+
+  function showMsg(type, text) {
+    var msg = document.getElementById("formMessage");
+    msg.className = "form-message " + type;
+    msg.textContent = text;
+    msg.style.display = "block";
+    msg.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+
+  // ── FAQ accordion ───────────────────────────────────────
+  function toggleFaq(el) {
+    var isOpen = el.classList.contains("open");
+    document.querySelectorAll(".faq-item.open").forEach(function(i) {
+      i.classList.remove("open");
+    });
+    if (!isOpen) el.classList.add("open");
+  }
+</script>
+</body>
+</html>
